@@ -13,9 +13,11 @@
 
         <table>
             <tr>
+                <!--
                 <td class="top">
                     <img src="images/BryceCoffee.jpg" style="margin-left: 25px; width: 450px; vertical-align: top;">
                 </td>
+                -->
                 <td>
                     <div style="margin-left: 10px; text-align: left;">
                         <p>
@@ -28,7 +30,7 @@
                     <div style="margin-left: 10px; text-align: left;">
                         <h2>Relativity Space</h2> 
                         <h3>Terran 1 Aeon Engine Avionics</h3>
-                        Both projects can be seen operating in the embedded tweet during a test first of <a href="https://www.relativityspace.com/rockets">Terran 1</a> Mission 1 first stage.
+                        Both projects can be seen operating in the embedded tweet during a test first of <a href="https://www.relativityspace.com/rockets">Terran 1</a> Mission 1 first stage. I was also able to write an <a href="https://spectrum.ieee.org/the-worlds-largest-3d-metal-printer-is-churning-out-rockets">article for IEEE Spectrum about 3D printing rockets</a> and our approach at Relativity Space, including avionics architecture choices on a 3D printed rocket.
                         <h4>Aeon 1 Engine Controller</h4>
                         <p>
                             One of my main projects as an individual contributor at Relativity Space was to design and build the Aeon 1 engine controller. This controller is a Remote Input/Output device that provides telemetry from engines as well as solenoid actuation. I designed a microcontroller and digital communications architecture which implements several ADC/DAC ICs providing various analog interfaces and solenoid control. This controller is also used as a stage controller and payload controller capable of pyrotechnic deployment. It combines five traditional avionics boxes into one box with a single easy to manufacture PCBA.
@@ -45,13 +47,47 @@
                         <h2>FaradayRF</h2>
                         <h3>Faraday Digital Transceiver</h3>
                             <p>
-                                My twin brother and I started a small business called FaradayRF which aimed to bring newer digital radio technology to amateur radio. Our fundamental goal was to provide some inspiration to using newer technology, embracing higher frequencies, and computer interfaces using modern tools. Our <a href="https://github.com/orgs/FaradayRF/repositories">FaradayRF GitHub project</a> hosts all the repositories (more than what's shown here). Both of us joined startups in 2018 and realized we could not spend the time running the project anymore. 
+                                My twin brother and I started a small business called FaradayRF which aimed to bring newer digital radio technology to amateur radio. Our fundamental goal was to provide some inspiration to using newer technology, embracing higher frequencies, and computer interfaces using modern tools. Our <a href="https://github.com/orgs/FaradayRF/repositories">FaradayRF GitHub project</a> hosts all the repositories (more than what's shown here). We were interviewed on the <a href="https://www.youtube.com/watch?v=xzRJCZgGrq8">FOSS weekly show 436</a> in 2017. Both of us joined startups in 2018 and realized we could not spend the time running the project anymore.
+                                <ul>
+                                    <li>Wayback Machine <a href="https://web.archive.org/web/20190425014408/https://faradayrf.com/">www.FaradayRF.com</a></li>
+                                </ul>
                             </p>
                         <h4>900 MHz RF Transceiver</h4>
                         <p>
-                            The open source hardware was developed using the KiCad EDA and all source files are located on the GitHub <a href="https://github.com/FaradayRF/FaradayRF-Hardware">FardayRF-Hardware</a> repository. The transceiver uses a Texas Instruments CC430 IC and communicated to the computer over a serial link. Effort was made to keep the design low-cost and simple. More than 100 transievers were manufactured.
+                            The open source hardware was developed using the KiCad EDA and all source files are located on the GitHub <a href="https://github.com/FaradayRF/FaradayRF-Hardware">FardayRF-Hardware</a> repository. The transceiver uses a Texas Instruments CC430 IC and communicated to the computer over a USB serial link. Effort was made to keep the design low-cost and simple. More than 100 transievers were manufactured. <a href="https://github.com/FaradayRF/FaradayRF-Hardware/raw/master/Kicad-Faraday/OutputFiles/FaradayRF-SCH.pdf">PDF Schematics</a> can be downloaded directly from GitHub. A small open source community existed around the project during this time. We were featured on Hackaday "<a href="https://hackaday.com/2016/10/31/put-that-amateur-radio-license-to-use-on-915-mhz/">Put That Amateur Radio License To Use On 915MHz</a>".
                         </p>
-                        <img src="images/FaradayTransceiver.JPG" style="width: 450px;">
+                        <p>
+                            Features of the designed for manufacturing (DFM) four-layer PCBA include:
+                        </p>
+                        <ul>
+                            <li>900 MHz CC430 transciever/microcontroller on-board Power amplifier @ 500mW RF output power</li>
+                            <li>Antenova <a href="http://antenova.com/wp-content/uploads/2015/11/M10478-A2-1_2-PS.pdf">M10478</a> GPS Receiver</li>
+                            <li>Ideal diode to cleanly switch between USB and external power</li>
+                            <li>5V-17V input to 3.3V output 500mA DC/DC buck converter</li>
+                            <li>Six filtered 12-bit ADC input channels</li>
+                            <li>Eight GPIO channels</li>
+                            <li>High-current low-side MOSFET switch</li>
+                            <li>On-board SPI SRAM & FLASH memory</li>
+                        </ul>
+                        <div align="center">
+                            <img src="images/FaradayTransceiver.JPG" style="width: 450px;">
+                        </div>
+                        <h4>Faraday Transceiver Software</h4>
+                        <p>
+                            I headed up the development of our Python software used to get data from the transceivers USB serial port. The source code is available from our <a href="https://github.com/FaradayRF/Faraday-Software">Faraday Software</a> repository. Several projects were published as packages on the PyPi servers for easy implementation by users.
+                        </p>
+                        <p>
+                            The Python code utilized a RESTful API, leveraging a web user interface for two way communications running on a local Python HTTP server. Various applications could be run independently to tap into the RESTful API and provide functions such as:
+                        </p>
+                        <ul>
+                            <li>Telemetry</li>
+                            <li>Simple Messaging</li>
+                            <li>Device configuration</li>
+                            <li><a href="http://www.aprs.org">APRS</a> bridge into the ARPS-IS network allowing display on <a href="https://aprs.fi">APRS.fi</a> website</li>
+                        </ul>
+                        <p>
+                            A <a href="https://github.com/FaradayRF/faradayio">TUN/TAP program</a> was also created to allow FardayRF hardware to act as a TCP/IP transceiver. This opened up a large number of pre-existing tools for TCP/IP use that could be leveraged for use with this project.
+                        </p>
 
                     </div>
                 </td>
