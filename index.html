@@ -24,7 +24,7 @@
                             I'm Bryce Salmi, an Electrical Engineer in Los Angeles, CA. I've been working in the Aerospace industry for nearly ten years designing electronics that fly on orbital class launch vehicles and satellites. You can view my <a href="https://www.linkedin.com/in/brycesalmi/">LinkedIn profile</a> for more professional information.
                         </p>
                         <p>
-                            This website is a collection of select personal and professional projects relevant to my career. Where possible I will include information regarding professional projects keeping NDA/proprietary information excluded. It is also <a href="https://github.com/kb1lqc/portfolio">source controlled on GitHub</a> and uses the Digital Ocean app deployment system to host.
+                            This website is a collection of select personal and professional projects relevant to my career. Not all projects are here. Where possible I will include information regarding professional projects keeping NDA/proprietary information excluded. This website is also <a href="https://github.com/kb1lqc/portfolio">source controlled on GitHub</a> and uses the Digital Ocean app deployment system to host.
                         </p>
                     </div>
                     <div style="margin-left: 10px; text-align: left;">
@@ -124,6 +124,46 @@
                         </p>
                         <div align="center">
                             <img src="images/MPPT-Feedback.png" style="width: 800px;">
+                        </div>
+                        <div style="margin-left: 10px; text-align: left;">
+                            <h2>Space Exploration Technologies (SpaceX)</h2>
+                            <h3>Crew Dragon</h3>
+                            <p>
+                            During my employment at SpaceX, I worked on several circuit boards used on the human rated Crew Dragon spacecraft. The two most relevant designs are a PCB used for sensor/actuator interfacing and another in the control panel.
+                            </p>
+                            <h4>Analog / Digital Interface PCBA</h4>
+                            Used in an avionics box that controls most Remote Input/Output functions on the vehicle, this PCBA is used for critical functions such as fan/pump speed control, various fluid and gas pressures, and docking actuator interfacing implemented with:
+                            <ul>
+                                <li>4-20mA Current Loops</li>
+                                <li>10V Output</li>
+                                <li>Tachometer</li>
+                                <li>CANbus</li>
+                            </ul>
+                            <h4>Control Panel Buttons and Lighting PCBA</h4>
+                            <p>
+                                This PCBA interfaced all buttons in the Crew Dragon control panel used by the astronauts during flight. It did this in a triplicated, fault tolerance manner to reduce erroneous button presses. Additionally, this PCBA also powers all LED's in the vehicle including ambient ring lights, galley lighting, and astronaut task lights.
+                            </p>
+                            <div align="center">
+                                <iframe src="https://giphy.com/embed/jTICZBuZsxUAieQLJ4" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+                                </div>
+                            <h3>Falcon 9 Launch Vehicle</h3>
+                                Over the years at SpaceX in Hawthorne, CA I worked on a variety of avionics flown on dozens of launches. Most notably including the first booster ever landed (Falcon 9 Flight 21).
+                            <h4>Payload Controller</h4> 
+                            This avionics box uses a fault tolerant triplicated design to deploy payloads from Stage 2. It is critical to the success of the mission and was my first avionics box I was able to see completely through the SMC-S-016 style ATP/QTP testing campaign. It has deployed at least 75 Iridium NEXT and 17 ORBCOMM OG2 satellites to date.
+                            <div align="center">
+                                <img src="images/iridium-deployment-iridium-2-spacex.gif" style="width: 800px;">
+                            </div>
+
+                            <h4>Falcon 9 Flight Computer PCBAs</h4>
+                            <p></p>
+                            As part of the Falcon 9 "Block 5" upgrade (2017) I was tasked with updating the following PCBAs used in the Falcon Flight Computer on both Stage 1 and Stage 2:
+                            <ul>
+                                <li>4-20mA PCBA</li>
+                                <li>Solenoid/valve PCBA</li>
+                                <li>Linear Variable Differential Transformer (LVDT) PCBA</li>
+                            </ul>
+                            The upgrades brought the original designs to match performance seen on Crew Dragon, modernization, simplification, and a healthy dose of Design For Manufacturing (DFM).
+                            </p>
                         </div>
                     </div>
                 </td>
