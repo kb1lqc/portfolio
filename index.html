@@ -24,20 +24,27 @@
                             I'm Bryce Salmi, an Electrical Engineer in Los Angeles, CA. I've been working in the Aerospace industry for nearly ten years designing electronics that fly on orbital class launch vehicles and satellites. You can view my <a href="https://www.linkedin.com/in/brycesalmi/">LinkedIn profile</a> for more professional information.
                         </p>
                         <p>
-                            This website is a collection of select personal and professional projects relevant to my career. Not all projects are here. When possible I will include information regarding professional projects keeping NDA/proprietary information excluded. This website is also <a href="https://github.com/kb1lqc/portfolio">source controlled on GitHub</a> and uses the Digital Ocean app deployment system to host.
+                            This website is a collection of select personal and professional projects relevant to my career. Not all projects are here. When possible I will include information regarding professional projects keeping NDA/proprietary information excluded.
                         </p>
                     </div>
                     <div style="margin-left: 10px; text-align: left;">
                         <h2>Relativity Space</h2> 
+                        Starting as employee 17 and the first avionics hire at Relativity Space, I was able to have a large impact on the Terran 1 avionics architecture. Since we couldn't 3D print avionics (yet?) I opted to think about avionics in a 3D printed way. Continually, we found ourselves asking "how can we iterate faster, reduce complexity, and reuse designs?" which had a profound impact on the vehicle. I was also able to write an <a href="https://spectrum.ieee.org/the-worlds-largest-3d-metal-printer-is-churning-out-rockets">article for IEEE Spectrum about 3D printing rockets</a> and our approach at Relativity Space, giving insight into the company mindset.
                         <h3>Terran 1 Aeon Engine Avionics</h3>
-                        Both projects can be seen operating in the embedded tweet during a test first of <a href="https://www.relativityspace.com/rockets">Terran 1</a> Mission 1 first stage. I was also able to write an <a href="https://spectrum.ieee.org/the-worlds-largest-3d-metal-printer-is-churning-out-rockets">article for IEEE Spectrum about 3D printing rockets</a> and our approach at Relativity Space, including avionics architecture choices on a 3D printed rocket.
+                        Both projects can be seen operating in the embedded tweet during a test of <a href="https://www.relativityspace.com/rockets">Terran 1</a> Mission 1 first stage engines.
                         <h4>Aeon 1 Engine Controller</h4>
                         <p>
                             One of my main projects as an individual contributor at Relativity Space was to design and build the Aeon 1 engine controller. This controller is a Remote Input/Output device that provides telemetry from engines as well as solenoid actuation. I designed a microcontroller and digital communications architecture which implements several ADC/DAC ICs providing various analog interfaces and solenoid control. This controller is also used as a stage controller and payload controller capable of pyrotechnic deployment. It combines five traditional avionics boxes into one box with a single easy to manufacture PCBA.
+                            <ul>
+                                <li>4-20mA current loops</li>
+                                <li>RTD temperature and breakwire interfaces</li>
+                                <li>Variable Reluctance interfaces</li>
+                                <li>Solenoid/Pyrotechnic interfaces</li>
+                            </ul>
                         </p>
                         <h4>Aeon 1 Thrust Vector Controller</h4>
                         <p>
-                            In mid-2021 I became the Responsible Engineer for the Thrust Vector Controller, a 300V three-phase Field Oriented Control (FOC) traction motor. This controlled an electric linear actuator which gimbals the engine in order to control the thrust vectors necessary to control the launch vehicle all the way to orbit. While I had to be extremely familiar with Field Oriented Control, a dedicated firmware engineer was responsible for designing the control algorithms.
+                            In mid-2021 I became the Responsible Engineer for the Thrust Vector Controller, a 300V three-phase Field Oriented Control (FOC) traction motor. This controlled an electric linear actuator which gimbals the engine in order to direct the thrust vectors necessary to control the launch vehicle all the way to orbit. While I had to be extremely familiar with Field Oriented Control, a dedicated firmware engineer was responsible for designing the control algorithms.
                         </p>
                         <div align="center">
                         <blockquote class="twitter-tweet"><p lang="en" dir="ltr">FULL DURATION 20 second stage test complete! Reviewing data and if all looks good, on to full flight duration test before LAUNCH. We are the first company to ever do this on launch mount at Cape Canaveral, and on track to be the first oxygen/methane rocket launched to orbit 👾🇺🇸 <a href="https://t.co/rMS77WHrqT">pic.twitter.com/rMS77WHrqT</a></p>&mdash; Tim Ellis (@thetimellis) <a href="https://twitter.com/thetimellis/status/1561801564741808129?ref_src=twsrc%5Etfw">August 22, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -47,7 +54,7 @@
                         <h2>FaradayRF</h2>
                         <h3>Faraday Digital Transceiver</h3>
                             <p>
-                                My twin brother and I started a small business called FaradayRF which aimed to bring newer digital radio technology to amateur radio. Our fundamental goal was to provide some inspiration to using newer technology, embracing higher frequencies, and computer interfaces using modern tools. Our <a href="https://github.com/orgs/FaradayRF/repositories">FaradayRF GitHub project</a> hosts all the repositories (more than what's shown here). We were interviewed on the <a href="https://www.youtube.com/watch?v=xzRJCZgGrq8">FOSS weekly show 436</a> in 2017. Both of us joined startups in 2018 and realized we could not spend the time running the project anymore.
+                                My twin brother and I started a small business called FaradayRF which aimed to bring newer digital radio technology to amateur radio. Our fundamental goal was to provide inspiration to using newer technology, embracing higher frequencies, and computer interfaces using modern toolsets. Our <a href="https://github.com/orgs/FaradayRF/repositories">FaradayRF GitHub project</a> hosts all the repositories (more than what's shown here). We were interviewed on the <a href="https://www.youtube.com/watch?v=xzRJCZgGrq8">FOSS weekly show 436</a> in 2017. Both of us joined startups in 2018 and realized we could not spend the time running the project anymore.
                                 <ul>
                                     <li>Wayback Machine <a href="https://web.archive.org/web/20190425014408/https://faradayrf.com/">www.FaradayRF.com</a></li>
                                 </ul>
@@ -74,7 +81,7 @@
                         </div>
                         <h4>Faraday Transceiver Software</h4>
                         <p>
-                            I headed up the development of our Python software used to get data from the transceivers USB serial port. The source code is available from our <a href="https://github.com/FaradayRF/Faraday-Software">Faraday Software</a> repository. Several projects were published as packages on the PyPi servers for easy implementation by users.
+                            I headed up the development of our Python software used to get data from the transceivers USB serial port. The source code is available from our <a href="https://github.com/FaradayRF/Faraday-Software">Faraday Software</a> repository. Several projects were published as packages on the PyPi servers for easy implementation by users. Unit testing and continuous integration was implemented on the GitHub repositories for higher quality code.
                         </p>
                         <p>
                             The Python code utilized a RESTful API, leveraging a web user interface for two-way communications running on a local Python HTTP server. Various applications could be run independently to tap into the RESTful API and provide functions such as:
@@ -94,10 +101,10 @@
                         <a href="https://www.amsat.org">The Radio Amateur Satellite Corporation</a>
                         <h3>Fox-1 Maximum Power Point Tracker</h3>
                         <p>
-                            As a continuation of my Rochester Institute of Technology (RIT) Senior Design Project, I worked nights and weekends for two years following graduation to bring the Maximum Power Point Tracker into flight status for use on the <a href="https://www.amsat.org/meet-the-fox-project/">Fox-1 cubesat family</a>. Currently there are four in orbit which have launched on an Atlas V, Falcon 9, Virgin Launched One, and a PSLV out of India.
+                            As a continuation of my Rochester Institute of Technology (RIT) Senior Design Project, I worked nights and weekends for two years following graduation to bring the Maximum Power Point Tracker into flight status for use on the <a href="https://www.amsat.org/meet-the-fox-project/">Fox-1 cubesat family</a>. Currently there are four in orbit which have launched on an Atlas V, Falcon 9, Launcher One, and a PSLV.
                         </p>
                         <p>
-                            The design files and documentation are hosted on the <a href="https://github.com/FaradayRF/Fox-1-MPPT">Fox-1-MPPT Github repository</a>. I thoroughly documented the MPPT in the <a href="https://github.com/FaradayRF/Fox-1-MPPT/raw/master/Documents/Fox-1_MaximumPowerPointTracker.pdf">technical document</a> which explains the electrical theory of the design in detail. PDF Schematics can be downloaded directly from Github at <a href="https://github.com/FaradayRF/Fox-1-MPPT/raw/master/Hardware/Rev2_1/OutputFiles/TL1451_MPPT_Flight_Rev2_BW.pdf">this link</a>.
+                            The design files and documentation are hosted on the <a href="https://github.com/FaradayRF/Fox-1-MPPT">Fox-1-MPPT GitHub repository</a>. I thoroughly documented the MPPT in the <a href="https://github.com/FaradayRF/Fox-1-MPPT/raw/master/Documents/Fox-1_MaximumPowerPointTracker.pdf">technical document</a> which explains the electrical theory of the design in detail. PDF Schematics can be downloaded directly from GitHub at <a href="https://github.com/FaradayRF/Fox-1-MPPT/raw/master/Hardware/Rev2_1/OutputFiles/TL1451_MPPT_Flight_Rev2_BW.pdf">this link</a>.
                         </p>
                         <h5>Fox-1 Satellites On Orbit With MPPTs</h5>
                         <ul>
@@ -120,7 +127,7 @@
                             As shown below, the op-amps in the design are used to implement several key circuits. The first one on the top is a constant current RTD driver (1mA) which drives a PT100 RTD located on the backside of the solar panels. The resulting measured voltage is conditioned with an op-amp using a Y=-mX+b gain value. The resulting output voltage of this op-amp is the expected MPPV of the solar cell at its current temperature.
                         </p>
                         <p>
-                            The lower circuit is a dual feedback error amplifier configuration that is fed into the TL1451 DC/DC controller. One Op-Amp is responsible for using the measured and conditioned RTD voltage to sense the input solar cell voltage and determine the error between the two. The second op-amp is a more traditional output voltage regulation design which limits the MPPT's output voltage to a voltage safe for the Fox-1 batteries. These two control loops hand-off cleanly due to their polarity and the sharing resistors which combine the signals.
+                            The lower circuit is a dual feedback error amplifier configuration that is fed into the TL1451A DC/DC controller. One Op-Amp is responsible for using the measured and conditioned RTD voltage to sense the input solar cell voltage and determine the error between the two. The second op-amp is a more traditional output voltage regulation design which limits the MPPT's output voltage to a voltage safe for the Fox-1 batteries. These two control loops hand-off cleanly due to their polarity and the sharing resistors which combine the signals.
                         </p>
                         <div align="center">
                             <img src="images/MPPT-Feedback.png" style="width: 800px;">
@@ -147,7 +154,7 @@
                                 <iframe src="https://giphy.com/embed/jTICZBuZsxUAieQLJ4" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
                                 </div>
                             <h3>Falcon 9 Launch Vehicle</h3>
-                                Over the years at SpaceX in Hawthorne, CA I worked on a variety of avionics flown on dozens of launches. Most notably including the first booster ever landed (Falcon 9 Flight 21).
+                                I worked on a variety of avionics flown on dozens of launches. Most notably the first booster ever landed (Falcon 9 Flight 21). Several of my designs also flew on the first Falcon Heavy launch including the core stages and side-boosters.
                             <h4>Payload Controller</h4> 
                             This avionics box uses a fault tolerant triplicated design to deploy payloads from Stage 2. It is critical to the success of the mission and was my first avionics box I was able to see completely through the SMC-S-016 style ATP/QTP testing campaign. It has deployed at least 75 Iridium NEXT and 17 ORBCOMM OG2 satellites to date.
                             <div align="center">
