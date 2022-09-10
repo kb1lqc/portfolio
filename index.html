@@ -70,7 +70,7 @@
                             <li>On-board SPI SRAM & FLASH memory</li>
                         </ul>
                         <div align="center">
-                            <img src="images/FaradayTransceiver.JPG" style="width: 450px;">
+                            <img src="images/FaradayTransceiver.JPG">
                         </div>
                         <h4>Faraday Transceiver Software</h4>
                         <p>
@@ -88,7 +88,43 @@
                         <p>
                             A <a href="https://github.com/FaradayRF/faradayio">TUN/TAP program</a> was also created to allow FardayRF hardware to act as a TCP/IP transceiver. This opened up a large number of pre-existing tools for TCP/IP use that could be leveraged for use with this project.
                         </p>
-
+                    </div>
+                    <div style="margin-left: 10px; text-align: left;">
+                        <h2>AMSAT</h2>
+                        <a href="www.amsat.org">The Radio Amateur Satellite Corporation</a>
+                        <h3>Fox-1 Maximum Power Point Tracker</h3>
+                        <p>
+                            As a continuation of my Rochester Institute of Technology (RIT) Senior Design Project, I worked nights and weekends for two years following graduation to bring the Maximum Power Point Tracker into flight status for use on the <a href="https://www.amsat.org/meet-the-fox-project/">Fox-1 cubesat family</a>. Currently there are four in orbit which have launched on an Atlas V, Falcon 9, Virgin Launched One, and a PSLV out of India.
+                        </p>
+                        <p>
+                            The design files and documentation are hosted on the <a href="https://github.com/FaradayRF/Fox-1-MPPT">Fox-1-MPPT Github repository</a>. I thoroughly documented the MPPT in the <a href="https://github.com/FaradayRF/Fox-1-MPPT/raw/master/Documents/Fox-1_MaximumPowerPointTracker.pdf">technical document</a> which explains the electrical theory of the design in detail. PDF Schematics can be downloaded directly from Github at <a href="https://github.com/FaradayRF/Fox-1-MPPT/raw/master/Hardware/Rev2_1/OutputFiles/TL1451_MPPT_Flight_Rev2_BW.pdf">this link</a>.
+                        </p>
+                        <h5>Fox-1 Satellites On Orbit With MPPTs</h5>
+                        <ul>
+                            <li>Fox-1Cliff | <a href="https://www.amsat.org/tlm/health.php?id=3&port=">Telemetry</a></li>
+                            <li>Fox-1D | <a href="https://www.amsat.org/tlm/leaderboard.php?id=4&db=FOXDB">Telemetry</a></li>
+                            <li>Fox-1B "RadFXSat" | <a href="https://www.amsat.org/tlm/health.php?id=2&port=">Telemetry</a></li>
+                            <li>Fox-1E "RadFXSat2 | <a href="https://www.amsat.org/tlm/health.php?id=5&port=">Telemetry</a></li>
+                        </ul>
+                        <div align="center">
+                        <img src="images/Fox-1_MPPT_Rev2_LowRes.jpeg">
+                        </div>
+                        <h5>Analog Maximum Power Point Tracking</h5>
+                        <p>
+                            The main goal of the AMSAT Fox-1 MPPT was to create a maximum power point tracker that could survive for more than five years in orbit using commercial parts. To do this, we built a completely stateless MPPT. There is no digital processing used to maximize power. The MPPT is an analog computer implemented with op-amps and a DC/DC controller cleanly switching between input voltage regulation and output voltage regulation. This protects the design from radiation Single Event Upsets (SEU) and Single Event Latch-ups (SEL).
+                        </p>
+                        <div align="center">
+                            <img src="images/MPPTBlockDiagram.png" style="width: 800px">
+                        </div>
+                        <p>
+                            As shown below, the op-amps in the design are used to implement several key circuits. The first one on the top is a constant current RTD driver (1mA) which drives a PT100 RTD located on the backside of the solar panels. The resulting measured voltage is conditioned with an op-amp using a Y=-mX+b gain value. The resulting output voltage of this op-amp is the expected MPPV of the solar cell at its current temperature.
+                        </p>
+                        <p>
+                            The lower circuit is a dual feedback error amplifier configuration that is fed into the TL1451 DC/DC controller. One Op-Amp is responsible for using the measured and conditioned RTD voltage to sense the input solar cell voltage and determine the error between the two. The second op-amp is a more traditional output voltage regulation design which limits the MPPT's output voltage to a voltage safe for the Fox-1 batteries. These two control loops hand-off cleanly due to their polarity and the sharing resistors which combine the signals.
+                        </p>
+                        <div align="center">
+                            <img src="images/MPPT-Feedback.png" style="width: 800px;">
+                        </div>
                     </div>
                 </td>
             </tr>
