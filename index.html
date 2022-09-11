@@ -44,7 +44,7 @@
                         </p>
                         <h4>Aeon 1 Thrust Vector Controller</h4>
                         <p>
-                            In mid-2021 I became the Responsible Engineer for the Thrust Vector Controller, a 300V three-phase Field Oriented Control (FOC) traction motor. This controlled an electric linear actuator which gimbals the engine in order to direct the thrust vectors necessary to control the launch vehicle all the way to orbit. While I had to be extremely familiar with Field Oriented Control, a dedicated firmware engineer was responsible for designing the control algorithms.
+                            In mid-2021 I became the Responsible Engineer for the Thrust Vector Controller, a 300V three-phase Field Oriented Control (FOC) traction motor PCBA. This controlled an electric linear actuator which gimbals the engine in order to direct the thrust vectors necessary to control the launch vehicle all the way to orbit. While I had to be extremely familiar with Field Oriented Control, a dedicated firmware engineer was responsible for designing the control algorithms.
                         </p>
                         <div align="center">
                         <blockquote class="twitter-tweet"><p lang="en" dir="ltr">FULL DURATION 20 second stage test complete! Reviewing data and if all looks good, on to full flight duration test before LAUNCH. We are the first company to ever do this on launch mount at Cape Canaveral, and on track to be the first oxygen/methane rocket launched to orbit 👾🇺🇸 <a href="https://t.co/rMS77WHrqT">pic.twitter.com/rMS77WHrqT</a></p>&mdash; Tim Ellis (@thetimellis) <a href="https://twitter.com/thetimellis/status/1561801564741808129?ref_src=twsrc%5Etfw">August 22, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -54,14 +54,14 @@
                         <h2>FaradayRF</h2>
                         <h3>Faraday Digital Transceiver</h3>
                             <p>
-                                My twin brother and I started a small business called FaradayRF which aimed to bring newer digital radio technology to amateur radio. Our fundamental goal was to provide inspiration to using newer technology, embracing higher frequencies, and computer interfaces using modern toolsets. Our <a href="https://github.com/orgs/FaradayRF/repositories">FaradayRF GitHub project</a> hosts all the repositories (more than what's shown here). We were interviewed on the <a href="https://www.youtube.com/watch?v=xzRJCZgGrq8">FOSS weekly show 436</a> in 2017. Both of us joined startups in 2018 and realized we could not spend the time running the project anymore.
+                                My twin brother and I started a small business called FaradayRF which aimed to bring newer digital radio technology to amateur radio. Our fundamental goal was to provide inspiration to using newer technology, embracing higher frequencies, and computer interfaces using modern toolsets. Our <a href="https://github.com/orgs/FaradayRF/repositories">FaradayRF GitHub project</a> hosts all the repositories. Both of us joined startups in 2018 and realized we could not spend the time running the project anymore.
                                 <ul>
                                     <li>Wayback Machine <a href="https://web.archive.org/web/20190425014408/https://faradayrf.com/">www.FaradayRF.com</a></li>
                                 </ul>
                             </p>
                         <h4>900 MHz RF Transceiver</h4>
                         <p>
-                            The open source hardware was developed using the KiCad EDA and all source files are located on the GitHub <a href="https://github.com/FaradayRF/FaradayRF-Hardware">FardayRF-Hardware</a> repository. The transceiver uses a Texas Instruments CC430 IC and communicated to the computer over a USB serial link. Effort was made to keep the design low-cost and simple. More than 100 transievers were manufactured. <a href="https://github.com/FaradayRF/FaradayRF-Hardware/raw/master/Kicad-Faraday/OutputFiles/FaradayRF-SCH.pdf">PDF Schematics</a> can be downloaded directly from GitHub. A small open source community existed around the project during this time. We were featured on Hackaday "<a href="https://hackaday.com/2016/10/31/put-that-amateur-radio-license-to-use-on-915-mhz/">Put That Amateur Radio License To Use On 915MHz</a>".
+                            The open source hardware was developed using the <a href="https://www.kicad.org">KiCad EDA</a> and all source files are located on the GitHub <a href="https://github.com/FaradayRF/FaradayRF-Hardware">FardayRF-Hardware</a> repository. The transceiver uses a Texas Instruments CC430 IC and communicated to the computer over a USB serial link. Effort was made to keep the design low-cost and simple. More than 100 transievers were manufactured. <a href="https://github.com/FaradayRF/FaradayRF-Hardware/raw/master/Kicad-Faraday/OutputFiles/FaradayRF-SCH.pdf">PDF Schematics</a> can be downloaded directly from GitHub. A small open source community existed around the project.
                         </p>
                         <p>
                             Features of the designed for manufacturing (DFM) four-layer PCBA include:
@@ -118,7 +118,7 @@
                         </div>
                         <h5>Analog Maximum Power Point Tracking</h5>
                         <p>
-                            The main goal of the AMSAT Fox-1 MPPT was to create a maximum power point tracker that could survive for more than five years in orbit using commercial parts. To do this, we built a completely stateless MPPT. There is no digital processing used to maximize power. The MPPT is an analog computer implemented with op-amps and a DC/DC controller cleanly switching between input voltage regulation and output voltage regulation. This protects the design from radiation Single Event Upsets (SEU) and Single Event Latch-ups (SEL).
+                            The main goal of the AMSAT Fox-1 MPPT was to create a maximum power point tracker that could survive for more than five years in orbit using commercial parts. To do this, we built a completely stateless MPPT. There is no digital processing used to maximize power, no state to corrupt. The MPPT is an analog computer implemented with op-amps and a DC/DC controller cleanly switching between input voltage regulation and output voltage regulation. This protects the design from radiation Single Event Upsets (SEU) and Single Event Latch-ups (SEL).
                         </p>
                         <div align="center">
                             <img src="images/MPPTBlockDiagram.png" style="width: 800px">
@@ -136,7 +136,7 @@
                             <h2>Space Exploration Technologies (SpaceX)</h2>
                             <h3>Crew Dragon</h3>
                             <p>
-                            During my employment at SpaceX, I worked on several circuit boards used on the human rated Crew Dragon spacecraft. The two most relevant designs are a PCB used for sensor/actuator interfacing and another in the control panel.
+                            During my employment at SpaceX, I worked on several circuit boards used on the human rated Crew Dragon spacecraft.
                             </p>
                             <h4>Analog / Digital Interface PCBA</h4>
                             Used in an avionics box that controls most Remote Input/Output functions on the vehicle, this PCBA is used for critical functions such as fan/pump speed control, various fluid and gas pressures, and docking actuator interfacing implemented with:
@@ -148,7 +148,7 @@
                             </ul>
                             <h4>Control Panel Buttons and Lighting PCBA</h4>
                             <p>
-                                This PCBA interfaced all buttons in the Crew Dragon control panel used by the astronauts during flight. It did this in a triplicated, fault tolerance manner to reduce erroneous button presses. Additionally, this PCBA also powers all LED's in the vehicle including ambient ring lights, galley lighting, and astronaut task lights.
+                                This PCBA interfaced all buttons in the Crew Dragon control panel used by the astronauts during flight. It did this in a triplicated, fault tolerant manner to reduce erroneous button presses. Additionally, this PCBA also powers all LED's in the vehicle including ambient ring lights, galley lighting, and astronaut task lights.
                             </p>
                             <div align="center">
                                 <iframe src="https://giphy.com/embed/jTICZBuZsxUAieQLJ4" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
